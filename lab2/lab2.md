@@ -8,29 +8,7 @@ In this scenario the front-end (React) will be deployed to Azure static web apps
 The API (Flask) will be deployed to Azure app service and the Database(Postgres) will be deployed to Azure Database for Postgresql
 
 # IAAS Diagram
-flowchart LR
- subgraph S1["Subnet - Web"]
-        WEBSS["Web Tier - VM Scale Set<br>React frontend"]
-  end
- subgraph S2["Subnet - App"]
-        APPSS["App Tier - VM Scale Set<br>Flask API layer"]
-  end
- subgraph S3["Subnet - DB"]
-        DB["PostgreSQL VM<br>Stores application data"]
-  end
- subgraph VNET["Azure Virtual Network"]
-        S1
-        S2
-        S3
-  end
-    U["Users / Browser<br>Access the app via HTTPS"] -- HTTPS 80/443 --> PLB["Azure Load Balancer - Public<br>Distributes web traffic across web VMs"]
-    PLB --> WEBSS
-    WEBSS -- /api proxy --> ALB["Azure Load Balancer - Private<br>Distributes traffic to API VMs"]
-    ALB --> APPSS
-    APPSS -- TCP 5432 --> DB
+![IaaS Diagram](img/Iaas.png)
 
 # PAAS Diagram
-flowchart LR
-    U["Users / Browser"] -- HTTPS --> SWA["Azure Static Web Apps - React"]
-    SWA -- "/api - HTTPS" --> API["Azure App Service - Flask"]
-    API --> PG["Azure Database for PostgreSQL"]
+![IaaS Diagram](img/Paas.png)
