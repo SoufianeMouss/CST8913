@@ -6,9 +6,14 @@
 
 ### Key components that need to be migrated
 Web App : We can deploy it in PAAS, especially if we don't want the headache of managing the VMs
+
 Database : We can utilize Azure SQL for our APP, which is also a PAAS
+
 File storage : Definitely PAAS, better to utilize Azure Blops to manage our files especially if we have a big amount.
-Networking : There are different options we can choose from what we need for our app such as Azure Firewall, Azure DDOS protection, Azure traffic manager.
+
+Networking : There are different options we can choose from what we need for our app such as Azure 
+Firewall, Azure DDOS protec tion, Azure traffic manager.
+
 Email service : We can opt in to Office 365, which is a SaaS solution, so there’s no need to build that functionality into our app
 
 ## Section 2: Migration Strategies
