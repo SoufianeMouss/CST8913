@@ -2,44 +2,7 @@
 
 ## Section 1: On-Premises Solution Design
 ### On-premises architecture
-```mermaid
----
----
-config:
-  layout: fixed
----
-flowchart TD
-    n16[" "] <--> n17[" "]
-    n18[" "] <--> n19[" "]
-    n22[" "] <--> n23[" "]
-    n24[" "] <--> n25[" "]
-    n11["Web App"]
-    A(["Client"])
-    n15["<br>"]
-    n2["DB"]
-    n4["Server"]
-    C["Modules/Features"]
-    n7["Modules/Features"]
-    n9(["Email Service"])
-    n12["Modules/Features"]
-    n13["Modules/Features"]
-    n16@{ shape: anchor}
-    n17@{ shape: anchor}
-    n18@{ shape: anchor}
-    n19@{ shape: anchor}
-    n22@{ shape: anchor}
-    n23@{ shape: anchor}
-    n24@{ shape: anchor}
-    n25@{ shape: anchor}
-    n11@{ shape: text}
-    n15@{ shape: rect}
-    n2@{ shape: cyl}
-    n4@{ shape: text}
-    n7@{ shape: rect}
-    n12@{ shape: rect}
-    n13@{ shape: rect}
-
-```
+![IaaS Diagram](img/diagram.png)
 
 ### Key components that need to be migrated
 Web App : We can deploy it in PAAS, especially if we don't want the headache of managing the VMs
