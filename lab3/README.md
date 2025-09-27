@@ -6,30 +6,39 @@
 ---
 ---
 config:
-  theme: redux
   layout: fixed
 ---
 flowchart TD
-    n10["<br>"] <--> n5["<br>"]
-    n14[" "] <--> n10
+    n16[" "] <--> n17[" "]
+    n18[" "] <--> n19[" "]
+    n22[" "] <--> n23[" "]
+    n24[" "] <--> n25[" "]
+    n11["Web App"]
     A(["Client"])
+    n15["<br>"]
     n2["DB"]
     n4["Server"]
     C["Modules/Features"]
     n7["Modules/Features"]
     n9(["Email Service"])
-    n11["Web App"]
     n12["Modules/Features"]
     n13["Modules/Features"]
-    n10@{ shape: rect}
-    n5@{ shape: rect}
-    n14@{ shape: anchor}
+    n16@{ shape: anchor}
+    n17@{ shape: anchor}
+    n18@{ shape: anchor}
+    n19@{ shape: anchor}
+    n22@{ shape: anchor}
+    n23@{ shape: anchor}
+    n24@{ shape: anchor}
+    n25@{ shape: anchor}
+    n11@{ shape: text}
+    n15@{ shape: rect}
     n2@{ shape: cyl}
     n4@{ shape: text}
     n7@{ shape: rect}
-    n11@{ shape: text}
     n12@{ shape: rect}
     n13@{ shape: rect}
+
 ```
 
 ### Key components that need to be migrated
