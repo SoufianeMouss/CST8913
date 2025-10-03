@@ -40,4 +40,4 @@ In this step we move the app as it is to Azure, it is usually fast , but could n
 #### Refactor
 In this step, we need to do some changes to our app in order for it to use PAAS services like (App service, SQL or Blop)
 ##### Re-architect
-This step usually takes more time, as we must redesign everything into microservices, this is what could make our app scalable, however it needs more time and effort.
+This step usually takes more time, as we must redesign everything into microservices, this is what could make our app scalable, however it needs more time and effort.  
