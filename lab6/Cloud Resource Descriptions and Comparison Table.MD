@@ -56,27 +56,25 @@ GCP is used to process the big query and analyze the big data.
 The three cloud providers are currently in a state of high competitiveness. All three suppliers offer essential tools and services, and are likely to extend them in the future, based on current trends and customer wants.
 
 ### AWS
-Amazon Web Services (AWS)
-
-. Breadth & maturity: Widest range of cloud services (>200).
-. Compute variety: Deep options (EC2 instance types, Graviton chips).
-. AI/ML platform: Amazon Bedrock and SageMaker for customizable AI models.
-. Global infrastructure: Largest number of regions and availability zones.
-. Hybrid tools: Outposts for on-prem AWS hardware integration.
+- Breadth & maturity: Widest range of cloud services (>200).
+- Compute variety: Deep options (EC2 instance types, Graviton chips).
+- AI/ML platform: Amazon Bedrock and SageMaker for customizable AI models.
+- Global infrastructure: Largest number of regions and availability zones.
+- Hybrid tools: Outposts for on-prem AWS hardware integration.
 
 ### Azure
-. Enterprise integration: Seamless with Windows Server, Active Directory, Office 365, and Microsoft Copilot.
-. Hybrid cloud: Azure Arc enables managing on-prem and multi-cloud resources.
-. AI ecosystem: Tight integration with OpenAI models via Azure OpenAI Service.
-. Developer tools: Strong DevOps and Visual Studio/GitHub integration.
-. Compliance: Broadest set of certifications for regulated industries.
+- Enterprise integration: Seamless with Windows Server, Active Directory, Office 365, and Microsoft Copilot.
+- Hybrid cloud: Azure Arc enables managing on-prem and multi-cloud resources.
+- AI ecosystem: Tight integration with OpenAI models via Azure OpenAI Service.
+- Developer tools: Strong DevOps and Visual Studio/GitHub integration.
+- Compliance: Broadest set of certifications for regulated industries.
 
 ### Google Cloud
-. Data & analytics: Industry-leading tools like BigQuery and Dataflow.
-. AI & generative models: Gemini for Google Cloud with multimodal AI.
-. Networking: Global VPC and private Google backbone with built-in redundancy.
-. Container leadership: Originator of Kubernetes and Anthos for hybrid K8s.
-. Billing model: Per-second billing and automatic sustained-use discounts.
+- Data & analytics: Industry-leading tools like BigQuery and Dataflow.
+- AI & generative models: Gemini for Google Cloud with multimodal AI.
+- Networking: Global VPC and private Google backbone with built-in redundancy.
+- Container leadership: Originator of Kubernetes and Anthos for hybrid K8s.
+- Billing model: Per-second billing and automatic sustained-use discounts.
 
 ## How the naming conventions between cloud providers differ for similar services.
 | **Aspect** | **AWS** | **Microsoft Azure** | **Google Cloud Platform (GCP)** |
