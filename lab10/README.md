@@ -1,6 +1,6 @@
 # Lab 10 - Lab: Design a Zero Trust Landing Zone for CloudMed Solutions
 
-## 1. Compamy Overview
+## 1. Company Overview
 CloudMed Solutions is a healthcare technology company offering cloud based telemedicine and patient-management services to hospitals and clinics across Canada, USA, and Europe. Its main platform, MedConnect, provides secure virtual consultations, EMR management, and AI-driven health analytics.
 
 ### Why Zero Trust?
