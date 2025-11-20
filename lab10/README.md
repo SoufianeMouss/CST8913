@@ -177,7 +177,7 @@ CloudMed uses Azure Cost Management features to control spending and maintain co
 These measures help CloudMed maintain predictable spending while supporting global healthcare operations.
 
 ## 6. Conceptual Diagram
-```
+```mermaid
 flowchart TB
 
     %% ============================
