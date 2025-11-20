@@ -1,17 +1,17 @@
 # Lab 10 - Lab: Design a Zero Trust Landing Zone for CloudMed Solutions
 
-### Compamy Overview
+## 1. Compamy Overview
 CloudMed Solutions is a healthcare technology company offering cloud based telemedicine and patient-management services to hospitals and clinics across Canada, USA, and Europe. Its main platform, MedConnect, provides secure virtual consultations, EMR management, and AI-driven health analytics.
 
-#### Why Zero Trust?
+### Why Zero Trust?
 
 CloudMed handles sensitive patient data across multiple regions, making it a high-risk target for cyberattacks. A Zero Trust architecture ensures strict identity verification, least privilege access, and segmentation of workloads to protect EMR data and telehealth services.
 
-#### Key Compliance & Operational Drivers
+### Key Compliance & Operational Drivers
 
 CloudMed must meet HIPAA, GDPR, and PIPEDA requirements while ensuring secure multi-region operations. They also need centralized governance, consistent security policies, and reliable monitoring to support their global healthcare workloads.
 
-### Governance and Identity
+## 2. Governance and Identity
 ```
 Root
 └── CloudMed
@@ -25,7 +25,7 @@ Root
           ├── GDPR
           └── PIPEDA
 ```
-#### Role-Based Access Control (RBAC)
+### Role-Based Access Control (RBAC)
 
 Admins : manage platform and core Azure resources.
 
@@ -33,15 +33,15 @@ DevOps : deploy and operate application workloads.
 
 Finance : view billing, budgets, and cost reports.
 
-#### Azure Policies
+### Azure Policies
 CloudMed uses Azure Policy to enforce consistent and compliant deployments:
 
 Allowed regions (Canada Central, West Europe, US regions for HIPAA)
 
-##### Mandatory tags:
+#### Mandatory tags:
 Environment, Owner, CostCenter
 
-##### Resource consistency:
+#### Resource consistency:
 
 - Encryption at rest required
 
@@ -51,7 +51,7 @@ Environment, Owner, CostCenter
 
 - Private Endpoints required for SQL and Storage
 
-##### Azure Entra ID
+#### Azure Entra ID
 
 CloudMed uses Azure Entra ID for identity and access management:
 
@@ -63,10 +63,10 @@ CloudMed uses Azure Entra ID for identity and access management:
 
 - Managed Identities for applications to remove secrets
 
-### Network Architecture
+## 3. Network Architecture
 CloudMed uses Hub-and-Spoke design
 
-#### Hub VNet
+### Hub VNet
 
 The Hub contains shared network services:
 
@@ -77,7 +77,7 @@ The Hub contains shared network services:
 
 These components provide centralized security and routing for all spokes.
 
-#### Spoke VNets
+### Spoke VNets
 
 CloudMed uses separate spokes for each workload tier:
 
@@ -87,7 +87,7 @@ CloudMed uses separate spokes for each workload tier:
 
 Spokes are isolated from each other, and all traffic flows through the Hub for inspection.
 
-#### Zero Trust Network Controls
+### Zero Trust Network Controls
 
 * East–west traffic passes through Azure Firewall
 * Subnets are segmented using NSGs
@@ -98,11 +98,11 @@ Spokes are isolated from each other, and all traffic flows through the Hub for i
 This design reduces lateral movement, enforces least privilege, and aligns with CloudMed’s compliance requirements.
 
 
-### Zero Trust Controls
+## 4. Zero Trust Controls
 
 CloudMed applies the three core Zero Trust principles across identity, network, and data to protect sensitive healthcare workloads.
 
-#### Verify Explicitly
+### Verify Explicitly
 
 Access to resources is authenticated and authorized based on identity, device compliance, and context.
 
@@ -111,7 +111,7 @@ Access to resources is authenticated and authorized based on identity, device co
 * Conditional Access to enforce trusted locations and compliant devices
 * Azure Bastion for secure administrative access (no public RDP/SSH)
 
-#### Least Privilege Access
+### Least Privilege Access
 
 Permissions follow a minimum-access model to reduce potential misuse.
 
@@ -121,7 +121,7 @@ Permissions follow a minimum-access model to reduce potential misuse.
 * Segmented VNets and subnets to restrict unnecessary communication
 
 
-#### Assume Breach
+### Assume Breach
 
 The environment is designed to limit lateral movement and reduce impact if an incident occurs.
 
@@ -132,7 +132,7 @@ The environment is designed to limit lateral movement and reduce impact if an in
 * Diagnostic logs collected centrally for incident response
 
 
-#### Zero Trust Design Examples
+### Zero Trust Design Examples
 
 * Azure Bastion: removes the need for public VM access
 * Private Link for SQL and Storage: prevents exposure to the public internet
@@ -141,9 +141,9 @@ The environment is designed to limit lateral movement and reduce impact if an in
 * Key Vault: secures secrets and enforces access auditing
 
 
-### Monitoring, Compliance, and Cost
+## 5. Monitoring, Compliance, and Cost
 
-#### Monitoring
+### Monitoring
 
 CloudMed uses centralized monitoring tools to track performance, security, and activity across all subscriptions.
 
@@ -155,7 +155,7 @@ CloudMed uses centralized monitoring tools to track performance, security, and a
 All logs flow into the management subscription for unified visibility and incident response.
 
 
-#### Compliance Enforcement
+### Compliance Enforcement
 
 Compliance with HIPAA, GDPR, and PIPEDA is enforced using Azure Policy and built-in regulatory standards.
 
@@ -165,7 +165,7 @@ Compliance with HIPAA, GDPR, and PIPEDA is enforced using Azure Policy and built
 * Policy inheritance: ensures all subscriptions follow consistent governance controls
 
 
-#### Cost Management
+### Cost Management
 
 CloudMed uses Azure Cost Management features to control spending and maintain cost visibility.
 
@@ -176,7 +176,7 @@ CloudMed uses Azure Cost Management features to control spending and maintain co
 
 These measures help CloudMed maintain predictable spending while supporting global healthcare operations.
 
-### Conceptual Diagram
+## 6. Conceptual Diagram
 ```
 flowchart TB
 
@@ -247,12 +247,12 @@ flowchart TB
 
 ```
 
-### Summary and Recommendations
+## 7. Summary and Recommendations
 
 The proposed Zero Trust Azure Landing Zone for CloudMed provides a secure, compliant, and scalable foundation for hosting healthcare workloads. The use of management groups, subscription separation, hub-and-spoke networking, and Azure Policy, it ensures strong governance and consistent security across all environments. 
 Identity protection is used through Azure Entra ID, MFA, and least-privilege RBAC, while Private Endpoints, network segmentation, and Azure Firewall reduce the attack surface and prevent lateral movement. The monitoring with Log Analytics and Defender for Cloud, supports continuous compliance with HIPAA, GDPR, and PIPEDA requirements.
 
-#### Recommendations for Future Improvement
+### Recommendations for Future Improvement
 
 * **Automation:** Implement Bicep or Terraform for deploying landing zone components and governance controls to ensure consistency, reduce configuration drift, and support repeatable deployments for new regions or workloads.
 * **Multi-cloud Expansion:** Expand the landing zone other cloud providers for global reach, and flexibility in meeting future data sovereignty or business requirements.
