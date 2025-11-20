@@ -12,6 +12,7 @@ CloudMed handles sensitive patient data across multiple regions, making it a hig
 CloudMed must meet HIPAA, GDPR, and PIPEDA requirements while ensuring secure multi-region operations. They also need centralized governance, consistent security policies, and reliable monitoring to support their global healthcare workloads.
 
 ### Governance and Identity
+```
 Root
 └── CloudMed
     ├── Management
@@ -23,6 +24,7 @@ Root
           ├── HIPAA
           ├── GDPR
           └── PIPEDA
+```
 #### Role-Based Access Control (RBAC)
 
 Admins : manage platform and core Azure resources.
